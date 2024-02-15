@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .task import notify_customers
+from .tasks import notify_customers
 
 
 def say_hello(request):
