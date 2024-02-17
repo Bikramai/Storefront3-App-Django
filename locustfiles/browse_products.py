@@ -8,6 +8,7 @@ class WebsiteUser(HttpUser):
     # Adding product to cart
     @task(2)
     def view_products(self):
+        print('View products')
         collection_id = randint(2, 6)
         self.client.get(
             f'/store/products/?collection_id={collection_id}', 
@@ -15,6 +16,7 @@ class WebsiteUser(HttpUser):
 
     @task(4)
     def view_product(self):
+        print('View product details')
         product_id = randint(1, 1000)
         self.client.get(
             f'/store/products/{product_id}',
@@ -23,6 +25,7 @@ class WebsiteUser(HttpUser):
 
     @task(1)
     def on_start(self):
+        print('Add to cart')
         product_id = randint(1, 10)
         self.client.post(
             f'/store/carts/{self.cart_id}/items/',
