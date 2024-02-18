@@ -220,11 +220,17 @@ LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'handlers': {
-        'console': 'logging.StreamHandler'
-    },
-    'file': {
-        'class': 'logging.FileHandler',
-        'filename': 'general.log'
+        'console': {
+            'class': 'logging.StreamHandler'
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': 'general.log',
+            'formatter': 'verbose'
+            
+            
+        }
+    
     },
     'loggers': {
         '': {
