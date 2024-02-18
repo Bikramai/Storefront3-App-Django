@@ -1,7 +1,7 @@
-from django.core.cache import cache
+# from django.core.cache import cache
 from django.shortcuts import render
-from django.utils.decorators import method_decorator
-from django.views.decorators.cache import cache_page
+# from django.utils.decorators import method_decorator
+# from django.views.decorators.cache import cache_page
 from rest_framework.views import APIView
 import logging
 import requests
